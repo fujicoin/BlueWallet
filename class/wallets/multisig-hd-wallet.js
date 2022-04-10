@@ -34,8 +34,8 @@ export class MultisigHDWallet extends AbstractHDElectrumWallet {
   static FORMAT_P2SH_P2WSH_ALT = 'p2wsh-p2sh';
   static FORMAT_P2SH = 'p2sh';
 
-  static PATH_NATIVE_SEGWIT = "m/48'/0'/0'/2'";
-  static PATH_WRAPPED_SEGWIT = "m/48'/0'/0'/1'";
+  static PATH_NATIVE_SEGWIT = "m/48'/75'/0'/2'";
+  static PATH_WRAPPED_SEGWIT = "m/48'/75'/0'/1'";
   static PATH_LEGACY = "m/45'";
 
   constructor() {
@@ -97,10 +97,10 @@ export class MultisigHDWallet extends AbstractHDElectrumWallet {
   setDerivationPath(path) {
     this._derivationPath = path;
     switch (this._derivationPath) {
-      case "m/48'/0'/0'/2'":
+      case "m/48'/75'/0'/2'":
         this._isNativeSegwit = true;
         break;
-      case "m/48'/0'/0'/1'":
+      case "m/48'/75'/0'/1'":
         this._isWrappedSegwit = true;
         break;
       case "m/45'":

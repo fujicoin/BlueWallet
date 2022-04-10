@@ -47,12 +47,10 @@ async function _getRealm() {
 }
 
 const storageKey = 'ELECTRUM_PEERS';
-const defaultPeer = { host: 'electrum1.bluewallet.io', ssl: '443' };
+const defaultPeer = { host: 'electrumx1.fujicoin.org', ssl: '50002' };
 const hardcodedPeers = [
-  { host: 'electrum1.bluewallet.io', ssl: '443' },
-  { host: 'electrum2.bluewallet.io', ssl: '443' },
-  { host: 'electrum.acinq.co', ssl: '50002' },
-  { host: 'electrum.bitaroo.net', ssl: '50002' },
+  { host: 'electrumx1.fujicoin.org', ssl: '50002' },
+  { host: 'electrumx2.fujicoin.org', ssl: '50002' },
 ];
 
 /** @type {ElectrumClient} */
@@ -850,8 +848,8 @@ module.exports.estimateFee = async function (numberOfBlocks) {
   if (!mainClient) throw new Error('Electrum client is not connected');
   numberOfBlocks = numberOfBlocks || 1;
   const coinUnitsPerKilobyte = await mainClient.blockchainEstimatefee(numberOfBlocks);
-  if (coinUnitsPerKilobyte === -1) return 1;
-  return Math.round(new BigNumber(coinUnitsPerKilobyte).dividedBy(1024).multipliedBy(100000000).toNumber());
+  if (coinUnitsPerKilobyte === -1) return 10000;
+  return coinUnitsPerKilobyte * 100000;
 };
 
 module.exports.serverFeatures = async function () {
