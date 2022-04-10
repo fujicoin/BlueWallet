@@ -32,7 +32,7 @@
   },
   "azteco": {
     "codeIs": "Ваш код ваучера",
-    "errorBeforeRefeem": "Перш ніж підтвердити, ви повинні додати гаманець Bitcoin.",
+    "errorBeforeRefeem": "Перш ніж підтвердити, ви повинні додати гаманець Fujicoin.",
     "errorSomething": "Щось пішло не так. Цей ваучер ще дійсний?",
     "redeemButton": "Купити",
     "success": "Успіх"
@@ -212,7 +212,7 @@
   "settings": {
     "about": "Про програму",
     "about_backup": "Завжди створюйте резервні копії ключів!",
-    "about_free": "BlueWallet — це безкоштовний проект з відкритим кодом. Створено користувачами Bitcoin.",
+    "about_free": "BlueWallet — це безкоштовний проект з відкритим кодом. Створено користувачами Fujicoin.",
     "about_license": "MIT Ліцензія",
     "about_release_notes": "Інформація про реліз",
     "about_review": "Залиште нам відгук",
@@ -287,7 +287,7 @@
     "updating": "Оновлення..."
   },
   "wallets": {
-    "add_bitcoin": "Bitcoin",
+    "add_bitcoin": "Fujicoin",
     "add_bitcoin_explain": "Простий і потужний Біткойн гаманець",
     "add_create": "Створити",
     "add_import_wallet": "Імпортувати гаманець",
@@ -340,7 +340,7 @@
     "list_long_choose": "Виберіть Фото",
     "list_long_scan": "Сканувати QR-код",
     "list_marketplace": "Ринок",
-    "list_tap_here_to_buy": "Купити Bitcoin",
+    "list_tap_here_to_buy": "Купити Fujicoin",
     "list_title": "Гаманці",
     "list_tryagain": "Спробуйте ще раз",
     "please_continue_scanning": "Продовжуйте сканування.",
@@ -353,7 +353,7 @@
   "multisig": {
     "multisig_vault": "Сховище",
     "fee": "Комісія: {number}",
-    "fee_btc": "{number} BTC",
+    "fee_btc": "{number} FJC",
     "confirm": "Підтвердити",
     "header": "Надіслати",
     "share": "Поділитися",
@@ -397,7 +397,7 @@
     "use_coins": "Використовувати Монети"
   },
   "units": {
-    "BTC": "BTC",
+    "FJC": "FJC",
     "MAX": "Макс",
     "sat_vbyte": "sat/vByte"
   },
