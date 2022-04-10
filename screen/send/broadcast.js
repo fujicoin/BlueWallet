@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ActivityIndicator, Alert, KeyboardAvoidingView, Linking, StyleSheet, Platform, TextInput, View, Keyboard } from 'react-native';
 import ReactNativeHapticFeedback from 'react-native-haptic-feedback';
 import { useRoute, useTheme, useNavigation } from '@react-navigation/native';
-import * as bitcoin from 'bitcoinjs-lib';
+import * as bitcoin from 'fujicoinjs-lib';
 
 import loc from '../../loc';
 import { HDSegwitBech32Wallet } from '../../class';

@@ -9,7 +9,7 @@ import {
   helperCreateWallet,
   helperSwitchAdvancedMode,
 } from './helperz';
-const bitcoin = require('bitcoinjs-lib');
+const bitcoin = require('fujicoinjs-lib');
 const assert = require('assert');
 
 jasmine.getEnv().addReporter({

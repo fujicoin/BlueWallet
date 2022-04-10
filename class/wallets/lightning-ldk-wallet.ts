@@ -9,7 +9,7 @@ import { HDSegwitBech32Wallet } from './hd-segwit-bech32-wallet';
 import bolt11 from 'bolt11';
 import { SegwitBech32Wallet } from './segwit-bech32-wallet';
 import alert from '../../components/Alert';
-const bitcoin = require('bitcoinjs-lib');
+const bitcoin = require('fujicoinjs-lib');
 
 export class LightningLdkWallet extends LightningCustodianWallet {
   static type = 'lightningLdk';

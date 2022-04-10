@@ -1,4 +1,4 @@
-import * as bitcoinjs from 'bitcoinjs-lib';
+import * as bitcoinjs from 'fujicoinjs-lib';
 import { HDLegacyP2PKHWallet } from './hd-legacy-p2pkh-wallet';
 import { AbstractHDElectrumWallet } from './abstract-hd-electrum-wallet';
 import BIP32Factory from 'bip32';

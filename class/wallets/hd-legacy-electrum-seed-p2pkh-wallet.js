@@ -2,7 +2,7 @@ import { HDLegacyP2PKHWallet } from './hd-legacy-p2pkh-wallet';
 import BIP32Factory from 'bip32';
 import * as ecc from 'tiny-secp256k1';
 
-const bitcoin = require('bitcoinjs-lib');
+const bitcoin = require('fujicoinjs-lib');
 const mn = require('electrum-mnemonic');
 const bip32 = BIP32Factory(ecc);
 

@@ -3,7 +3,7 @@ import b58 from 'bs58check';
 import BIP32Factory from 'bip32';
 import * as ecc from 'tiny-secp256k1';
 
-const bitcoin = require('bitcoinjs-lib');
+const bitcoin = require('fujicoinjs-lib');
 const { CipherSeed } = require('aezeed');
 const bip32 = BIP32Factory(ecc);
 

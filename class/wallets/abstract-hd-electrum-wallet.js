@@ -8,7 +8,7 @@ import { randomBytes } from '../rng';
 import { AbstractHDWallet } from './abstract-hd-wallet';
 import { ECPairFactory } from 'ecpair';
 const ECPair = ECPairFactory(ecc);
-const bitcoin = require('bitcoinjs-lib');
+const bitcoin = require('fujicoinjs-lib');
 const BlueElectrum = require('../../blue_modules/BlueElectrum');
 const reverse = require('buffer-reverse');
 const bip32 = BIP32Factory(ecc);

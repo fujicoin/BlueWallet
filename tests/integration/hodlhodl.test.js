@@ -4,7 +4,7 @@ import { ECPairFactory } from 'ecpair';
 const ecc = require('tiny-secp256k1');
 const ECPair = ECPairFactory(ecc);
 
-const bitcoin = require('bitcoinjs-lib');
+const bitcoin = require('fujicoinjs-lib');
 const assert = require('assert');
 
 it.skip('can verify escrow address', () => {

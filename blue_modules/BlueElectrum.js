@@ -6,7 +6,7 @@ import loc from '../loc';
 import WidgetCommunication from './WidgetCommunication';
 import { isTorDaemonDisabled } from './environment';
 import alert from '../components/Alert';
-const bitcoin = require('bitcoinjs-lib');
+const bitcoin = require('fujicoinjs-lib');
 const ElectrumClient = require('electrum-client');
 const reverse = require('buffer-reverse');
 const BigNumber = require('bignumber.js');

@@ -1,5 +1,5 @@
 import assert from 'assert';
-import * as bitcoin from 'bitcoinjs-lib';
+import * as bitcoin from 'fujicoinjs-lib';
 
 import { HDSegwitP2SHWallet } from '../../class';
 import * as BlueElectrum from '../../blue_modules/BlueElectrum';

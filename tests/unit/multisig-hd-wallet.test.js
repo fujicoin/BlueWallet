@@ -2,7 +2,7 @@ import assert from 'assert';
 import { MultisigHDWallet } from '../../class/';
 import { decodeUR, encodeUR } from '../../blue_modules/ur';
 import { MultisigCosigner } from '../../class/multisig-cosigner';
-const bitcoin = require('bitcoinjs-lib');
+const bitcoin = require('fujicoinjs-lib');
 const Base43 = require('../../blue_modules/base43');
 
 const fp1cobo = 'D37EAD88';

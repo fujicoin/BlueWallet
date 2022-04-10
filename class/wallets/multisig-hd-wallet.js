@@ -8,7 +8,7 @@ import * as ecc from 'tiny-secp256k1';
 const ECPair = ECPairFactory(ecc);
 const BlueElectrum = require('../../blue_modules/BlueElectrum');
 const bip32 = BIP32Factory(ecc);
-const bitcoin = require('bitcoinjs-lib');
+const bitcoin = require('fujicoinjs-lib');
 const createHash = require('create-hash');
 const reverse = require('buffer-reverse');
 const mn = require('electrum-mnemonic');

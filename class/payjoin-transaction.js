@@ -1,4 +1,4 @@
-import * as bitcoin from 'bitcoinjs-lib';
+import * as bitcoin from 'fujicoinjs-lib';
 import ReactNativeHapticFeedback from 'react-native-haptic-feedback';
 import alert from '../components/Alert';
 import { ECPairFactory } from 'ecpair';

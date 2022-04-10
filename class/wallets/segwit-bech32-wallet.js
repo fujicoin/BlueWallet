@@ -2,7 +2,7 @@ import { LegacyWallet } from './legacy-wallet';
 import { ECPairFactory } from 'ecpair';
 const ecc = require('tiny-secp256k1');
 const ECPair = ECPairFactory(ecc);
-const bitcoin = require('bitcoinjs-lib');
+const bitcoin = require('fujicoinjs-lib');
 
 export class SegwitBech32Wallet extends LegacyWallet {
   static type = 'segwitBech32';

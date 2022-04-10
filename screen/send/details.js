@@ -23,7 +23,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import ReactNativeHapticFeedback from 'react-native-haptic-feedback';
 import RNFS from 'react-native-fs';
 import BigNumber from 'bignumber.js';
-import * as bitcoin from 'bitcoinjs-lib';
+import * as bitcoin from 'fujicoinjs-lib';
 
 import { BlueButton, BlueDismissKeyboardInputAccessory, BlueListItem, BlueLoading, BlueText } from '../../BlueComponents';
 import { navigationStyleTx } from '../../components/navigationStyle';
@@ -383,7 +383,7 @@ const SendDetails = () => {
   };
 
   /**
-   * TODO: refactor this mess, get rid of regexp, use https://github.com/bitcoinjs/bitcoinjs-lib/issues/890 etc etc
+   * TODO: refactor this mess, get rid of regexp, use https://github.com/bitcoinjs/fujicoinjs-lib/issues/890 etc etc
    *
    * @param data {String} Can be address or `bitcoin:xxxxxxx` uri scheme, or invalid garbage
    */

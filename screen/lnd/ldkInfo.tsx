@@ -9,7 +9,7 @@ import loc, { formatBalance } from '../../loc';
 import LNNodeBar from '../../components/LNNodeBar';
 import BottomModal from '../../components/BottomModal';
 import Button, { ButtonStyle } from '../../components/Button';
-import { Psbt } from 'bitcoinjs-lib';
+import { Psbt } from 'fujicoinjs-lib';
 import { AbstractWallet, LightningLdkWallet } from '../../class';
 import alert from '../../components/Alert';
 const selectWallet = require('../../helpers/select-wallet');

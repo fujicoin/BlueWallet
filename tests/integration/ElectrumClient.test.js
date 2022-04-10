@@ -1,4 +1,4 @@
-import * as bitcoin from 'bitcoinjs-lib';
+import * as bitcoin from 'fujicoinjs-lib';
 import assert from 'assert';
 import ElectrumClient from 'electrum-client';
 
