@@ -871,6 +871,7 @@ export class AbstractHDElectrumWallet extends AbstractHDWallet {
 
     sequence = sequence || AbstractHDElectrumWallet.defaultRBFSequence;
     let psbt = new bitcoin.Psbt();
+    psbt.setMaximumFeeRate(1000000);
     let c = 0;
     const keypairs = {};
     const values = {};

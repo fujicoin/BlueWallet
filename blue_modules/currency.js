@@ -86,7 +86,7 @@ async function updateExchangeRate() {
   try {
     rate = await getFiatRate(preferredFiatCurrency.endPointKey);
     exchangeRates[LAST_UPDATED] = +new Date();
-    exchangeRates['BTC_' + preferredFiatCurrency.endPointKey] = rate;
+    exchangeRates['FJC_' + preferredFiatCurrency.endPointKey] = rate;
     exchangeRates.LAST_UPDATED_ERROR = false;
     await AsyncStorage.setItem(EXCHANGE_RATES_STORAGE_KEY, JSON.stringify(exchangeRates));
   } catch (Err) {
@@ -132,12 +132,12 @@ async function init(clearLastUpdatedTime = false) {
 }
 
 function satoshiToLocalCurrency(satoshi, format = true) {
-  if (!exchangeRates['BTC_' + preferredFiatCurrency.endPointKey]) {
+  if (!exchangeRates['FJC_' + preferredFiatCurrency.endPointKey]) {
     updateExchangeRate();
     return '...';
   }
 
-  let b = new BigNumber(satoshi).dividedBy(100000000).multipliedBy(exchangeRates['BTC_' + preferredFiatCurrency.endPointKey]);
+  let b = new BigNumber(satoshi).dividedBy(100000000).multipliedBy(exchangeRates['FJC_' + preferredFiatCurrency.endPointKey]);
 
   if (b.isGreaterThanOrEqualTo(0.005) || b.isLessThanOrEqualTo(-0.005)) {
     b = b.toFixed(2);
@@ -185,7 +185,7 @@ async function mostRecentFetchedRate() {
   });
   return {
     LastUpdated: currencyInformation[LAST_UPDATED],
-    Rate: formatter.format(currencyInformation[`BTC_${preferredFiatCurrency.endPointKey}`]),
+    Rate: formatter.format(currencyInformation[`FJC_${preferredFiatCurrency.endPointKey}`]),
   };
 }
 
@@ -201,7 +201,7 @@ function btcToSatoshi(btc) {
 
 function fiatToBTC(fiatFloat) {
   let b = new BigNumber(fiatFloat);
-  b = b.dividedBy(exchangeRates['BTC_' + preferredFiatCurrency.endPointKey]).toFixed(8);
+  b = b.dividedBy(exchangeRates['FJC_' + preferredFiatCurrency.endPointKey]).toFixed(8);
   return b;
 }
 

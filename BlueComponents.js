@@ -663,7 +663,7 @@ export class BlueReplaceFeeSuggestions extends Component {
   };
 
   state = {
-    customFeeValue: '1',
+    customFeeValue: '10000',
   };
 
   async componentDidMount() {

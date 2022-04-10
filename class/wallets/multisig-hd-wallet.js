@@ -814,6 +814,7 @@ export class MultisigHDWallet extends AbstractHDElectrumWallet {
     sequence = sequence || AbstractHDElectrumWallet.defaultRBFSequence;
 
     let psbt = new bitcoin.Psbt();
+    psbt.setMaximumFeeRate(1000000);
 
     let c = 0;
     inputs.forEach(input => {

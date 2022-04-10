@@ -31,12 +31,12 @@ export default class NetworkTransactionFees {
           const networkFee = new NetworkTransactionFee(response.fast, response.medium, response.slow);
           resolve(networkFee);
         } else {
-          const networkFee = new NetworkTransactionFee(1, 1, 1);
+          const networkFee = new NetworkTransactionFee(50000, 20000, 10000);
           resolve(networkFee);
         }
       } catch (err) {
         console.warn(err);
-        const networkFee = new NetworkTransactionFee(1, 1, 1);
+        const networkFee = new NetworkTransactionFee(50000, 20000, 10000);
         resolve(networkFee);
       }
     });

@@ -68,6 +68,7 @@ export class SegwitBech32Wallet extends LegacyWallet {
     const { inputs, outputs, fee } = this.coinselect(utxos, targets, feeRate, changeAddress);
     sequence = sequence || 0xffffffff; // disable RBF by default
     const psbt = new bitcoin.Psbt();
+    psbt.setMaximumFeeRate(1000000);
     let c = 0;
     const values = {};
     let keyPair;
