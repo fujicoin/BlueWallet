@@ -607,13 +607,13 @@ describe('BlueWallet UI Tests - no wallets', () => {
       .not.toExist()
       .withTimeout(300 * 1000);
 
-    await expect(element(by.text("m/44'/0'/1'"))).toBeVisible();
-    await expect(element(by.text("m/49'/0'/0'"))).toBeVisible();
-    await expect(element(by.text("m/84'/0'/0'"))).toBeVisible();
+    await expect(element(by.text("m/44'/75'/1'"))).toBeVisible();
+    await expect(element(by.text("m/49'/75'/0'"))).toBeVisible();
+    await expect(element(by.text("m/84'/75'/0'"))).toBeVisible();
 
     // open custom derivation path screen and import the wallet
     await element(by.id('CustomDerivationPathButton')).tap();
-    await element(by.id('DerivationPathInput')).replaceText("m/44'/0'/1'");
+    await element(by.id('DerivationPathInput')).replaceText("m/44'/75'/1'");
     await waitFor(element(by.text('found'))) // wait for discovery to be completed
       .toExist()
       .withTimeout(300 * 1000);
@@ -624,7 +624,7 @@ describe('BlueWallet UI Tests - no wallets', () => {
     // go to wallet and check derivation path
     await element(by.id('Imported HD Legacy (BIP44 P2PKH)')).tap();
     await element(by.id('WalletDetails')).tap();
-    await expect(element(by.id('DerivationPath'))).toHaveText("m/44'/0'/1'");
+    await expect(element(by.id('DerivationPath'))).toHaveText("m/44'/75'/1'");
 
     await device.pressBack();
     await device.pressBack();

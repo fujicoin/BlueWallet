@@ -17,14 +17,14 @@ export class MultisigCosigner {
     if (data.startsWith('Zpub') && MultisigCosigner.isXpubValid(data)) {
       this._fp = '00000000';
       this._xpub = data;
-      this._path = "m/48'/0'/0'/2'";
+      this._path = "m/48'/75'/0'/2'";
       this._valid = true;
       this._cosigners = [true];
       return;
     } else if (data.startsWith('Ypub') && MultisigCosigner.isXpubValid(data)) {
       this._fp = '00000000';
       this._xpub = data;
-      this._path = "m/48'/0'/0'/1'";
+      this._path = "m/48'/75'/0'/1'";
       this._valid = true;
       this._cosigners = [true];
       return;
