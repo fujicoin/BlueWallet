@@ -17,7 +17,7 @@ import {
   HDAezeedWallet,
   SLIP39LegacyP2PKHWallet,
 } from '../class';
-const bitcoin = require('bitcoinjs-lib');
+const bitcoin = require('fujicoinjs-lib');
 const BlueCrypto = require('react-native-blue-crypto');
 const encryption = require('../blue_modules/encryption');
 const BlueElectrum = require('../blue_modules/BlueElectrum');

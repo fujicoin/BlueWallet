@@ -10,7 +10,7 @@ import { SquareButton } from '../../components/SquareButton';
 
 import loc from '../../loc';
 import alert from '../../components/Alert';
-const bitcoin = require('bitcoinjs-lib');
+const bitcoin = require('fujicoinjs-lib');
 const fs = require('../../blue_modules/fs');
 
 const isDesktop = getSystemName() === 'Mac OS X';

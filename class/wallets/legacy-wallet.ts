@@ -1,9 +1,9 @@
 import BigNumber from 'bignumber.js';
-import bitcoinMessage from 'bitcoinjs-message';
+import bitcoinMessage from 'fujicoinjs-message';
 import { randomBytes } from '../rng';
 import { AbstractWallet } from './abstract-wallet';
 import { HDSegwitBech32Wallet } from '..';
-import * as bitcoin from 'bitcoinjs-lib';
+import * as bitcoin from 'fujicoinjs-lib';
 import * as BlueElectrum from '../../blue_modules/BlueElectrum';
 import coinSelect from 'coinselect';
 import coinSelectSplit from 'coinselect/split';
@@ -503,7 +503,7 @@ export class LegacyWallet extends AbstractWallet {
    *
    * p2tr addresses have extra logic, rejecting all versions >1
    * @see https://github.com/BlueWallet/BlueWallet/issues/3394
-   * @see https://github.com/bitcoinjs/bitcoinjs-lib/issues/1750
+   * @see https://github.com/bitcoinjs/fujicoinjs-lib/issues/1750
    * @see https://github.com/bitcoin/bips/blob/edffe529056f6dfd33d8f716fb871467c3c09263/bip-0350.mediawiki#Addresses_for_segregated_witness_outputs
    *
    * @param address
@@ -624,7 +624,7 @@ export class LegacyWallet extends AbstractWallet {
       if (e.message === 'checkSegwitAlways can only be used with a compressed pubkey signature flagbyte') {
         // If message created with uncompressed private key, it will throw this error
         // in this case we should re-try with checkSegwitAlways flag off
-        // node_modules/bitcoinjs-message/index.js:187
+        // node_modules/fujicoinjs-message/index.js:187
         return bitcoinMessage.verify(message, address, signature);
       }
       throw e;

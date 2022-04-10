@@ -1,6 +1,6 @@
 import { WatchOnlyWallet } from '../../class';
 import { decodeUR, encodeUR, setUseURv1, clearUseURv1, extractSingleWorkload, BlueURDecoder } from '../../blue_modules/ur';
-import { Psbt } from 'bitcoinjs-lib';
+import { Psbt } from 'fujicoinjs-lib';
 const assert = require('assert');
 
 describe('Watch only wallet', () => {

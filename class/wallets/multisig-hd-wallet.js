@@ -8,7 +8,7 @@ import * as ecc from 'tiny-secp256k1';
 const ECPair = ECPairFactory(ecc);
 const BlueElectrum = require('../../blue_modules/BlueElectrum');
 const bip32 = BIP32Factory(ecc);
-const bitcoin = require('bitcoinjs-lib');
+const bitcoin = require('fujicoinjs-lib');
 const createHash = require('create-hash');
 const reverse = require('buffer-reverse');
 const mn = require('electrum-mnemonic');
@@ -1006,7 +1006,7 @@ export class MultisigHDWallet extends AbstractHDElectrumWallet {
           } catch (_) {} // protects agains duplicate cosignings
 
           if (!psbt.inputHasHDKey(cc, hdRoot)) {
-            // failed signing as HD. probably bitcoinjs-lib could not match provided hdRoot's
+            // failed signing as HD. probably fujicoinjs-lib could not match provided hdRoot's
             // fingerprint (or path?) to the ones in psbt, which is the case of stupid Electrum desktop which can
             // put bullshit paths and fingerprints in created psbt.
             // lets try to find correct priv key and sign manually.

@@ -1,5 +1,5 @@
 import { SegwitP2SHWallet } from '../../class';
-const bitcoin = require('bitcoinjs-lib');
+const bitcoin = require('fujicoinjs-lib');
 const assert = require('assert');
 
 describe('Segwit P2SH wallet', () => {
@@ -42,7 +42,7 @@ describe('Segwit P2SH wallet', () => {
 
   it('can sign and verify messages', async () => {
     const l = new SegwitP2SHWallet();
-    l.setSecret('L4rK1yDtCWekvXuE6oXD9jCYfFNV2cWRpVuPLBcCU2z8TrisoyY1'); // from bitcoinjs-message examples
+    l.setSecret('L4rK1yDtCWekvXuE6oXD9jCYfFNV2cWRpVuPLBcCU2z8TrisoyY1'); // from fujicoinjs-message examples
 
     const signature = l.signMessage('This is an example of a signed message.', l.getAddress());
     assert.strictEqual(signature, 'I9L5yLFjti0QTHhPyFrZCT1V/MMnBtXKmoiKDZ78NDBjERki6ZTQZdSMCtkgoNmp17By9ItJr8o7ChX0XxY91nk=');

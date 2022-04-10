@@ -5,7 +5,7 @@ import url from 'url';
 import { Chain } from '../models/bitcoinUnits';
 import Lnurl from './lnurl';
 import Azteco from './azteco';
-const bitcoin = require('bitcoinjs-lib');
+const bitcoin = require('fujicoinjs-lib');
 const bip21 = require('bip21');
 
 class DeeplinkSchemaMatch {
