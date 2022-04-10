@@ -6,7 +6,7 @@ import localizedFormat from 'dayjs/plugin/localizedFormat';
 import * as RNLocalize from 'react-native-localize';
 import BigNumber from 'bignumber.js';
 
-import { BitcoinUnit } from '../models/bitcoinUnits';
+import { FujicoinUnit } from '../models/fujicoinUnits';
 import { AvailableLanguages } from './languages';
 import { I18nManager } from 'react-native';
 const currency = require('../blue_modules/currency');
@@ -287,20 +287,20 @@ export const removeTrailingZeros = value => {
 /**
  *
  * @param balance {number} Satoshis
- * @param toUnit {String} Value from models/bitcoinUnits.js
- * @param withFormatting {boolean} Works only with `BitcoinUnit.SATS`, makes spaces wetween groups of 000
+ * @param toUnit {String} Value from models/fujicoinUnits.js
+ * @param withFormatting {boolean} Works only with `FujicoinUnit.SATS`, makes spaces wetween groups of 000
  * @returns {string}
  */
 export function formatBalance(balance, toUnit, withFormatting = false) {
   if (toUnit === undefined) {
-    return balance + ' ' + strings.units[BitcoinUnit.BTC];
+    return balance + ' ' + strings.units[FujicoinUnit.FJC];
   }
-  if (toUnit === BitcoinUnit.BTC) {
+  if (toUnit === FujicoinUnit.FJC) {
     const value = new BigNumber(balance).dividedBy(100000000).toFixed(8);
-    return removeTrailingZeros(value) + ' ' + strings.units[BitcoinUnit.BTC];
-  } else if (toUnit === BitcoinUnit.SATS) {
-    return (withFormatting ? new Intl.NumberFormat().format(balance).toString() : String(balance)) + ' ' + strings.units[BitcoinUnit.SATS];
-  } else if (toUnit === BitcoinUnit.LOCAL_CURRENCY) {
+    return removeTrailingZeros(value) + ' ' + strings.units[FujicoinUnit.FJC];
+  } else if (toUnit === FujicoinUnit.SATS) {
+    return (withFormatting ? new Intl.NumberFormat().format(balance).toString() : String(balance)) + ' ' + strings.units[FujicoinUnit.SATS];
+  } else if (toUnit === FujicoinUnit.LOCAL_CURRENCY) {
     return currency.satoshiToLocalCurrency(balance);
   }
 }
@@ -308,8 +308,8 @@ export function formatBalance(balance, toUnit, withFormatting = false) {
 /**
  *
  * @param balance {Integer} Satoshis
- * @param toUnit {String} Value from models/bitcoinUnits.js, for example `BitcoinUnit.SATS`
- * @param withFormatting {boolean} Works only with `BitcoinUnit.SATS`, makes spaces wetween groups of 000
+ * @param toUnit {String} Value from models/fujicoinUnits.js, for example `FujicoinUnit.SATS`
+ * @param withFormatting {boolean} Works only with `FujicoinUnit.SATS`, makes spaces wetween groups of 000
  * @returns {string}
  */
 export function formatBalanceWithoutSuffix(balance = 0, toUnit, withFormatting = false) {
@@ -317,12 +317,12 @@ export function formatBalanceWithoutSuffix(balance = 0, toUnit, withFormatting =
     return balance;
   }
   if (balance !== 0) {
-    if (toUnit === BitcoinUnit.BTC) {
+    if (toUnit === FujicoinUnit.FJC) {
       const value = new BigNumber(balance).dividedBy(100000000).toFixed(8);
       return removeTrailingZeros(value);
-    } else if (toUnit === BitcoinUnit.SATS) {
+    } else if (toUnit === FujicoinUnit.SATS) {
       return withFormatting ? new Intl.NumberFormat().format(balance).toString() : String(balance);
-    } else if (toUnit === BitcoinUnit.LOCAL_CURRENCY) {
+    } else if (toUnit === FujicoinUnit.LOCAL_CURRENCY) {
       return currency.satoshiToLocalCurrency(balance);
     }
   }
@@ -333,8 +333,8 @@ export function formatBalanceWithoutSuffix(balance = 0, toUnit, withFormatting =
  * Should be used when we need a simple string to be put in text input, for example
  *
  * @param  balance {integer} Satoshis
- * @param toUnit {String} Value from models/bitcoinUnits.js, for example `BitcoinUnit.SATS`
- * @param withFormatting {boolean} Works only with `BitcoinUnit.SATS`, makes spaces wetween groups of 000
+ * @param toUnit {String} Value from models/fujicoinUnits.js, for example `FujicoinUnit.SATS`
+ * @param withFormatting {boolean} Works only with `FujicoinUnit.SATS`, makes spaces wetween groups of 000
  * @returns {string}
  */
 export function formatBalancePlain(balance = 0, toUnit, withFormatting = false) {

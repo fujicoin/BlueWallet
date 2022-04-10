@@ -543,7 +543,7 @@
     "vault_key": "금고 키 {number}",
     "required_keys_out_of_total": "총 갯수중 요구되는 키의 수",
     "fee": "수수료: {number}",
-    "fee_btc": "{number} BTC",
+    "fee_btc": "{number} FJC",
     "confirm": "컨펌",
     "header": "보내기",
     "share": "공유하기",
@@ -632,7 +632,7 @@
     "tip": "이 기능을 사용하면 코인을 확인, 표시, 동결 또는 선택하여 지갑 관리를 개선 할 수 있습니다. 색칠 된 원을 선택하여 여러 코인을 선택할 수 있습니다."
   },
   "units": {
-    "BTC": "비트코인",
+    "FJC": "비트코인",
     "MAX": "최대",
     "sat_vbyte": "가상바이트당 사토시",
     "sats": "사토시"
